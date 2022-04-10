@@ -1,0 +1,136 @@
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: font;
+    src: url(fonts/Nunito-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: font;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #141519;
+    font-size: 16px;
+}
+
+.container {
+    width: 360px;
+    padding: 20px;
+    color: white;
+    background-color: #202731;
+    border-radius: 20px;
+    margin-top: 150px;
+}
+
+.container .rates {
+    display: flex;
+    margin-top: 20px;
+}
+
+.container .rates .rate {
+    padding: 12px;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    margin-left: 20px;
+    padding: 10px 15px;
+    color: #79828b;
+    font-weight: bold;
+    font-size: .9em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container .rates .rate:hover {
+    background-color: #f5781b;
+    color: white;
+}
+
+.container .summery {}
+
+.container .summery .text {
+    color: #818892;
+    font-weight: bold;
+}
+
+.container .summery .title {}
+
+.container .icon {
+    padding: 12px;
+    background-color: rgba(255, 255, 255, .1);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.container .button {
+    margin: 0 auto;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    background-color: #f5781b;
+    color: white;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 120px;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container .button:hover {
+    background-color: white;
+    color: #f5781b;
+}
+
+.container .img {
+    padding: 20px 0;
+}
+
+.container .feedback {
+    color: #f5781b;
+    padding: 6px 17px;
+    background-color: rgba(255, 255, 255, .1);
+    display: inline-block;
+    border-radius: 50px;
+    font-size: .8em;
+}
+
+.container .text-container {}
+
+.container .text-container .title2 {
+    padding-top: 10px;
+    margin-bottom: -4px;
+    margin-top: 15px;
+}
+
+.container .text-container .text2 {
+    color: #818892;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.active {
+    background-color: #838c9b !important;
+    color: white !important;
+    cursor: default !important;
+}
