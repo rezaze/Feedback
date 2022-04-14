@@ -9,7 +9,7 @@ function showNum() {
             let currect = document.querySelector(".active");
             btn[i].classList.add("active");
             currect.className = currect.className.replace("active", "");
-            btn[i].className += "active";
+            btn[i].classList.add("active");
         });
     }
 }
