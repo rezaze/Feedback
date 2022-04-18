@@ -2,14 +2,19 @@ const btn = document.querySelectorAll(".rate");
 const submit = document.querySelector(".button");
 const showResult = document.getElementById("result");
 
+submit.disabled = true;
+submit.style.opacity = "0.5";
 
-function showNum() {
-    for (let i = 0; i <= btn.length; i++) {
+async function showNum() {
+    for (let i = 0; i < btn.length; i++) {
         btn[i].addEventListener("click", () => {
             let currect = document.querySelector(".active");
-            btn[i].classList.add("active");
+            submit.classList.add("hov");
+            btn[i].classList.toggle("active");
+            submit.disabled = false;
+            submit.style.opacity = "1";
             currect.className = currect.className.replace("active", "");
-            btn[i].classList.add("active");
+            btn[i].classList.add(".active");
         });
     }
 }
@@ -69,13 +74,16 @@ function createItem() {
     let currect = document.querySelector(".active");
     sessionStorage.setItem("show", `You selected ${currect.innerHTML} out of 5`);
     if (currect.innerHTML != "") {
-        window.open("result.html");
+        window.open("result.html", "_self");
+    } else if (currect.innerHTML == "") {
+        submit.disabled = true;
+        submit.style.opacity = "0.5";
     }
 }
 
 function showItem() {
-    var x = sessionStorage["show"];
-    showResult.innerHTML = x;
+    var result = sessionStorage["show"];
+    showResult.innerHTML = result;
 }
 
 showNum();
