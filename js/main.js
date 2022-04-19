@@ -10,10 +10,10 @@ async function showNum() {
         btn[i].addEventListener("click", () => {
             let currect = document.querySelector(".active");
             submit.classList.add("hov");
-            btn[i].classList.toggle("active");
             submit.disabled = false;
             submit.style.opacity = "1";
-            currect.className = currect.className.replace("active", "");
+            btn[i].classList.toggle("active");
+            currect.className = btn[i].className.replace("active", "");
             btn[i].classList.add(".active");
         });
     }
