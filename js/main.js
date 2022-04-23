@@ -2,11 +2,15 @@ const btn = document.querySelectorAll(".rate");
 const submit = document.querySelector(".button");
 const showResult = document.getElementById("result");
 
-submit.disabled = true;
-submit.style.opacity = "0.5";
 
-async function showNum() {
+function showNum() {
     for (let i = 0; i < btn.length; i++) {
+        if (btn[i].classNam != "active") {
+            submit.disabled = true;
+            submit.style.opacity = "0.5";
+        }
+        submit.disabled = true;
+        submit.style.opacity = "0.5";
         btn[i].addEventListener("click", () => {
             let currect = document.querySelector(".active");
             submit.classList.add("hov");
@@ -14,7 +18,7 @@ async function showNum() {
             submit.style.opacity = "1";
             btn[i].classList.toggle("active");
             currect.className = btn[i].className.replace("active", "");
-            btn[i].classList.add(".active");
+            btn[i].classList.add("active");
         });
     }
 }
@@ -75,9 +79,9 @@ function createItem() {
     sessionStorage.setItem("show", `You selected ${currect.innerHTML} out of 5`);
     if (currect.innerHTML != "") {
         window.open("result.html", "_self");
-    } else if (currect.innerHTML == "") {
+    } else {
         submit.disabled = true;
-        submit.style.opacity = "0.5";
+        submit.style.opacity = "0.4";
     }
 }
 
