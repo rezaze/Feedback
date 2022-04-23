@@ -17,7 +17,9 @@ function showNum() {
             submit.disabled = false;
             submit.style.opacity = "1";
             btn[i].classList.toggle("active");
-            currect.className = btn[i].className.replace("active", "");
+            if (currect != null) {
+                currect.className = btn[i].className.replace("active", "");
+            }
             btn[i].classList.add("active");
         });
     }
